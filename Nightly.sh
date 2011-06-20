@@ -2,9 +2,9 @@
 
 ttytter -status="Nightlies have started, stay tuned."
 
-pushd ~/OMFGB
+pushd ~/$ROM
 rm -rf *
-repo sync -j99
+repo sync -j40
 . vendor/omfgb/build/nightly.sh
 popd
 
