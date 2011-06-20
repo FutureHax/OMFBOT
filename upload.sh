@@ -19,4 +19,8 @@ put $ZIP
 bye
 EOT
 
-ttytter -status="New $DEVICE Nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/"
+pushd ~/OMFGB
+#make clobber
+popd
+
+ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/"

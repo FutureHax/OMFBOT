@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pushd ~/OMFGB
-make clobber
+. build/envsetup.sh
 lunch 5
 make otapackage -j$(grep processor /proc/cpuinfo | wc -l)
 
