@@ -20,7 +20,7 @@ bye
 EOT
 
 pushd ~/OMFGB
-#make clobber
+make clobber
 popd
 
 ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/"
