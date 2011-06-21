@@ -1,18 +1,20 @@
 #!/bin/bash
 
-ttytter -status="Nightlies have started, stay tuned."
+DATE=$(date +%m-%d)
+
+ttytter -status="Nightlies for $DATE have started, stay tuned"
 
 pushd ~/OMFGB
-rm -rf *
-repo sync -j99
+#rm -rf *
+#repo sync -j99
 . vendor/omfgb/build/nightly.sh
 popd
 
-./BuildBot/inc.sh
+./OMFBOT/inc.sh
 
-./BuildBot/sholes.sh
+#./OMFBOT/sholes.sh
 
-./BuildBot/desirec.sh
+./OMFBOT/desirec.sh
 
-./BuildBot/heroc.sh
+./OMFBOT/heroc.sh
 
