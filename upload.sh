@@ -23,4 +23,4 @@ pushd ~/OMFGB
 make clobber
 popd
 
-ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/"
+ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"

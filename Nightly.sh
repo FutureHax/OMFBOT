@@ -12,7 +12,7 @@ popd
 
 ./BuildBot/sholes.sh
 
-./BuildBot/heroc.sh
+./BuildBot/desirec.sh
 
 ./BuildBot/heroc.sh
 
