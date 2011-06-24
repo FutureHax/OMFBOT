@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#Announce the beginning of nightlies.
-ttytter -status="Nightlies for $DATE have started, stay tuned"
-
 #Pull config from file.
 . OMFBOT/OMFBOT_config
+
+#Announce the beginning of nightlies.
+ttytter -status="Nightlies for $DATE have started, stay tuned"
 
 #Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
 pushd ~/Nightly

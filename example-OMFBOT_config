@@ -13,4 +13,4 @@ MANIFESTREPO="git@github.com:OMFGB/OMFGBManifests.git"
 MANIFESTTMP=${MANIFESTREPO##*/}
 MANIFESTDIR=${MANIFESTTMP%*.git}
 
-MANIFESTENTRY="{\n\"device\"=\"$DEVICE\",\n\"base\"=\"1.3.0\",\n\"version\"=$DATE,\n\"date\"=\"$DATE\",\n\"name\"=\"$ZIP\",\n\"url\"=\"$REMOTEDIR/$ZIP\",\n\"installable\"=\"false\",\n},"
+MANIFESTENTRY="{\n\"device\"=\"$DEVICE\",\n\"base\"=\"1.3.0\",\n\"version\"=$DATE,\n\"date\"=\"$DATE\",\n\"name\"=\"$ZIP\",\n\"url\"=\"http://$REMOTEDIR$ZIP\",\n\"installable\"=\"false\"\n},"

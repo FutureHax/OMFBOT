@@ -17,7 +17,7 @@ EOT
 #Announce new Nightly build.
 ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
 
-#Update device nightky manifests.
+#Update device nightly manifests.
 pushd ~/OMFBOT/
 rm -rf $MANIFESTDIR
 git clone $MANIFESTREPO
@@ -31,5 +31,12 @@ git push
 popd
 popd
 
+#Take a pause, @OMFBOT doesn't like to tweet in such rapid sucession.
+sleep 60
+
 #Announce new build avaialibility in God Mode.
 ttytter -status="Grab the new $DEVICE nightly from God Mode!"
+
+pushd ~/Nightly
+make clean
+popd
