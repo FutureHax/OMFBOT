@@ -7,7 +7,7 @@
 ttytter -status="Nightlies for $DATE have started, stay tuned"
 
 #Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
-pushd ~/Nightly
+pushd $BUILDDIR
 repo forall -c git pull origin master
 repo forall -c git pull korg gingerbread-release
 repo forall -c git pull cm gingerbread
