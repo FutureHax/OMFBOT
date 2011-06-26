@@ -9,13 +9,13 @@ ascii
 user $USER $PASSWD
 prompt
 cd $REMOTEDIR
-lcd ~/Nightly/out/target/product/$DEVICE/
+lcd $BUILDDIR/out/target/product/$DEVICE/
 put $ZIP
 bye
 EOT
 
 #Announce new Nightly build.
-ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
+ttytter -status="New $DEVICE nightly available $HOSTHTTP/$DEVICE/$ZIP"
 
 #Update device nightly manifests.
 pushd ~/OMFBOT/
@@ -37,6 +37,6 @@ sleep 60
 #Announce new build avaialibility in God Mode.
 ttytter -status="Grab the new $DEVICE nightly from God Mode!"
 
-pushd ~/Nightly
+pushd $BUILDDIR
 make clean
 popd
