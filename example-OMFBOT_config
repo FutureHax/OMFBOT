@@ -3,6 +3,7 @@ Not all of these config setting are generalized. Some are still specific to OMFG
 USER="FTP Username"
 PASSWD="FTP Password"
 HOST="FTP Server"
+HOSTHTTP="Web location without device folders. ie http://r2doesinc.bitsurge.net/nightlies"
 BUILDDIR="Location of source ie ~/aosp"
 UPLOADFILE=$(find $BUILDDIR/out/target/product/ -maxdepth 2 -name 'OMFGB_*.zip')
 TMP=${UPLOADFILE#*/OMFGB_}
