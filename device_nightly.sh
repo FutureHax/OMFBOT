@@ -4,7 +4,7 @@
 ./kernel_config
 
 #Announce the beginning of nightlies.
-ttytter -status="Nightlies for Evo have started, stay tuned"
+ttytter -status="Nightlies for DEVICE have started, stay tuned"
 
 #run the build script.
 ./device_build.sh
