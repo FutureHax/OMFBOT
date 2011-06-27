@@ -9,7 +9,7 @@ ascii
 user $USER $PASSWD
 prompt
 cd $REMOTEDIR
-lcd $BUILDDIR/out/target/product/$DEVICE/
+lcd ~/Nightly/out/target/product/$DEVICE/
 put $ZIP
 bye
 EOT
@@ -37,6 +37,6 @@ sleep 60
 #Announce new build avaialibility in God Mode.
 ttytter -status="Grab the new $DEVICE nightly from God Mode!"
 
-pushd $BUILDDIR
+pushd ~/Nightly
 make clean
 popd
