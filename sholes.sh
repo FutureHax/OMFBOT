@@ -3,7 +3,7 @@
 #Pull config from file.
 . OMFBOT/OMFBOT_config
 
-pushd $BUILDDIR/
+pushd ~/Nightly/
 pushd ./build/
 git checkout sholes
 popd

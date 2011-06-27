@@ -7,7 +7,7 @@
 ttytter -status="Nightlies for $DATE have started, stay tuned"
 
 #Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
-pushd $BUILDDIR
+pushd ~/Nightly
 repo forall -c git reset HEAD --hard
 repo sync -j99
 
