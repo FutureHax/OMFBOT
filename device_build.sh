@@ -23,9 +23,9 @@ cp ~/src/arch/arm/boot/zImage ~/src/build/zImage
 cp ~/src/drivers/net/wireless/bcm4329/bcm4329.ko  ~/src/build/system/lib/modules/bcm4329.ko
 
 #these files are evo-specific
-#cp ~/test/drivers/net/wimax/SQN/sequans_sdio.ko ~/test/system/lib/modules/
-#cp ~/test/drivers/net/wimax/wimaxdbg/wimaxdbg.ko ~/test/system/lib/modules/
-#cp ~/test/drivers/net/wimax/wimaxuart/wimaxuart.ko ~/test/system/lib/modules/
+#cp ~/src/drivers/net/wimax/SQN/sequans_sdio.ko ~/src/build/system/lib/modules/
+#cp ~/src/drivers/net/wimax/wimaxdbg/wimaxdbg.ko ~/src/build/system/lib/modules/
+#cp ~/src/drivers/net/wimax/wimaxuart/wimaxuart.ko ~/src/build/system/lib/modules/
 
 #go back to your build dir
 cd build
