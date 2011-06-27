@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Pull in info from config file.
-./config
+./kernel_config
 
 #Upload file to FTP
 ftp -n -v yourftpsite.com << EOT

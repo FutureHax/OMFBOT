@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Pull config from file.
-./config
+./kernel_config
 
 #Announce the beginning of nightlies.
 ttytter -status="Nightlies for Evo have started, stay tuned"

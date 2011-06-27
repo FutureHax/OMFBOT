@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #Pull config from file.
-./kernell_config
+./kernel_config
 
 #cd to kernel soure path, assuming your kernel soure dir is named src.
 cd ~/src
  
-#self explanitory.
+#self explanitory....this does not chnge.
 make clean
 
 #defconfig for your device.
