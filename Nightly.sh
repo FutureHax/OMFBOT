@@ -74,6 +74,8 @@ popd
 #Start builds. These can be reordered.
 ./OMFBOT/inc.sh
 
+./OMFBOT/mecha.sh
+
 ./OMFBOT/sholes.sh
 
 ./OMFBOT/desirec.sh
