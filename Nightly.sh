@@ -24,5 +24,7 @@ popd
 
 ./OMFBOT/heroc.sh
 
+./OMFBOT/mecha.sh
+
 exit
 
