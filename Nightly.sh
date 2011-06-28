@@ -5,47 +5,61 @@
 
 #Announce the beginning of nightlies.
 ttytter -status="Nightlies for $DATE have started, stay tuned"
-
-#Setup mecha branches
 pushd ~/Nightly
 
+#Setup sholes branch
+pushd build/
+git checkout -b sholes origin/sholes
+git checkout -b master origin/master
+git checkout master
+popd
+
+#Setup mecha branches
 pushd bionic/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd frameworks/base/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd system/core/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd system/netd/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd packages/apps/Phone/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd packages/apps/Settings/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd packages/apps/Stk/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
 pushd packages/providers/TelephonyProviders/
 git checkout -b mecha origin/mecha
+git checkout -b master origin/master
 git checkout master
 popd
 
