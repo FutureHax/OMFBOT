@@ -6,12 +6,52 @@
 #Announce the beginning of nightlies.
 ttytter -status="Nightlies for $DATE have started, stay tuned"
 
-#Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
+#Setup mecha branches
 pushd ~/Nightly
-repo forall -c git pull origin master
-repo forall -c git pull korg gingerbread-release
-repo forall -c git pull cm gingerbread
+
+pushd bionic/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd frameworks/base/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd system/core/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd system/netd/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd packages/apps/Phone/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd packages/apps/Settings/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd packages/apps/Stk/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+pushd packages/providers/TelephonyProviders/
+git checkout -b mecha origin/mecha
+git checkout master
+popd
+
+#Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
 repo forall -c git reset HEAD --hard
+repo sync -j99
 
 #Specify nightly rather than full build.
 . vendor/omfgb/build/nightly.sh
