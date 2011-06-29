@@ -10,9 +10,7 @@ cd ~/src
 cd build
 git clone https://github.com/koush/AnyKernel.git
 
-#if you are devving for the thunderbolt, use this anykernel instead of the preceding version....NOTE: you need to comment out lines 10 and 11 and uncomment lines 15 and 16 for this next command to work.
- 
-#cd build
+#if you are devving for the thunderbolt, use this anykernel instead of the preceding version....NOTE: you need to comment out lines 10 and 11 and uncomment lines 14 for this next command to work.
 #git clone https://github.com/jdkoreclipse/AnyKernel.git
  
 #self explanitory....this does not chnge.
