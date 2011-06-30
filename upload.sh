@@ -15,7 +15,7 @@ bye
 EOT
 
 #Announce new Nightly build.
-ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
+ttytter -status="New $DEVICE nightly available $HOSTHTTP/$DEVICE/$ZIP"
 
 #Update device nightly manifests.
 pushd ~/OMFBOT/
