@@ -30,7 +30,7 @@ pushd packages/apps/Stk/
 git checkout mecha
 popd
 
-pushd packages/providers/TelephonyProviders/
+pushd packages/providers/TelephonyProvider/
 git checkout mecha
 popd
 
@@ -38,37 +38,7 @@ popd
 lunch 6
 make otapackage -j$(grep processor /proc/cpuinfo | wc -l)
 
-pushd bionic/
-git checkout master
-popd
-
-pushd frameworks/base/
-git checkout master
-popd
-
-pushd system/core/
-git checkout master
-popd
-
-pushd system/netd/
-git checkout master
-popd
-
-pushd packages/apps/Phone/
-git checkout master
-popd
-
-pushd packages/apps/Settings/
-git checkout master
-popd
-
-pushd packages/apps/Stk/
-git checkout master
-popd
-
-pushd packages/providers/TelephonyProviders/
-git checkout master
-popd
+. ../OMFBOT/branch_reset.sh
 
 popd
 . OMFBOT/upload.sh
