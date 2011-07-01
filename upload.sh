@@ -16,6 +16,10 @@ EOT
 
 #Announce new Nightly build.
 ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
+if [ $DEVICE == mecha ]
+then
+ttytter -status="This is the MR1 compatible build. For MR2 compatible build, see @RootzWiki. They will not display in the Nightlies app at this time"
+fi
 
 #Update device nightly manifests.
 pushd ~/OMFBOT/
