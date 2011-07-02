@@ -82,6 +82,8 @@ popd
 
 ./OMFBOT/mecha.sh
 
+./OMFBOT/supersonic.sh
+
 ./OMFBOT/sholes.sh
 
 ./OMFBOT/desirec.sh
