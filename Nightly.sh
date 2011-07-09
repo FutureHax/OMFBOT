@@ -2,6 +2,7 @@
 
 #Clean the build
 pushd ~/Nightly
+. ../OMFBOT/branch_reset.sh
 make clobber
 popd
 
