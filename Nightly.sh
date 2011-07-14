@@ -10,7 +10,7 @@ popd
 . OMFBOT/OMFBOT_config
 
 #Announce the beginning of nightlies.
-ttytter -status="Nightlies for $DATE have started, stay tuned"
+ttytter -status="Nightlies for $DATE have started, stay tuned. Please wipe when updateing tonights build."
 pushd ~/Nightly
 
 #Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
@@ -18,34 +18,31 @@ repo forall -c git branch -D  mecha
 repo forall -c git reset HEAD --hard
 repo sync -j99
 
-#Setup sholes branch
-pushd build/
-git checkout -b sholes origin/sholes
-git checkout -b master origin/master
-git checkout master
-popd
-
 #Setup mecha branches
 pushd bionic/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
 
 pushd frameworks/base/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
 
 pushd system/core/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
 
 pushd system/netd/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
@@ -58,18 +55,21 @@ popd
 
 pushd packages/apps/Settings/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
 
 pushd packages/apps/Stk/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
 
 pushd packages/providers/TelephonyProvider/
 git checkout -b mecha origin/mecha
+git pull origin mecha
 git checkout -b master origin/master
 git checkout master
 popd
@@ -82,6 +82,10 @@ popd
 ./OMFBOT/inc.sh
 
 ./OMFBOT/mecha.sh
+
+./OMFBOT/vivow.sh
+
+./OMFBOT/fascinatemtd.sh
 
 ./OMFBOT/supersonic.sh
 

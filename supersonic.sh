@@ -2,7 +2,7 @@
 
 pushd ~/Nightly
 . build/envsetup.sh
-lunch 8
+lunch 7
 make otapackage -j$(grep processor /proc/cpuinfo | wc -l)
 
 popd

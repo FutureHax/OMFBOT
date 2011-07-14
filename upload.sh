@@ -15,10 +15,19 @@ bye
 EOT
 
 #Announce new Nightly build.
-ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
-if [ $DEVICE == mecha ]
+if [ ! -z $DEVICE ]
 then
-ttytter -status="This is the MR2 compatible build. MR1 builds are no longer supported!"
+ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
+else
+ttytter -status="Bot failed, chack back tomorrow night."
+fi
+
+if [ ! -z $DEVICE && $DEVICE == mecha ]
+then
+ttytter -status="MR2 Radio only. The OTA Radio is reported to run badly with this build."
+elif [ ! -z $DEVICE && $DEVICE == fascinatemtd ]
+then
+ttytter -status="Until we get the bugs out, follow the installation instructions here. http://pastebin.com/pzcVAc6a"
 fi
 
 #Update device nightly manifests.
@@ -39,6 +48,7 @@ popd
 sleep 60
 
 #Announce new build avaialibility in God Mode.
+if [ ! -z $DEVICE ]
 ttytter -status="Grab the new $DEVICE nightly from God Mode!"
 
 pushd ~/Nightly
