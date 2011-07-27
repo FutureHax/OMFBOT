@@ -18,16 +18,9 @@ EOT
 if [ ! -z $DEVICE ]
 then
 ttytter -status="New $DEVICE nightly available http://r2doesinc.bitsurge.net/nightlies/$DEVICE/$ZIP"
+ttytter -status="Md5 for $ZIP : $MD5 "
 else
-ttytter -status="Bot failed, chack back tomorrow night."
-fi
-
-if [ ! -z $DEVICE && $DEVICE == mecha ]
-then
-ttytter -status="MR2 Radio only. The OTA Radio is reported to run badly with this build."
-elif [ ! -z $DEVICE && $DEVICE == fascinatemtd ]
-then
-ttytter -status="Until we get the bugs out, follow the installation instructions here. http://pastebin.com/pzcVAc6a"
+ttytter -status="Bot errored. Blame @xoomdev $RANDOM times."
 fi
 
 #Update device nightly manifests.
@@ -49,7 +42,11 @@ sleep 60
 
 #Announce new build avaialibility in God Mode.
 if [ ! -z $DEVICE ]
+then
 ttytter -status="Grab the new $DEVICE nightly from God Mode!"
+fi
+
+cd ~/
 
 pushd ~/Nightly
 make clean

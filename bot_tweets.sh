@@ -13,9 +13,9 @@ DOW=$(date +"%A")
 tweet=$RANDOM
 if [ $DOW == Friday ]
 then
-let "tweet %= 16"
+let "tweet %= 17"
 else
-let "tweet %= 11"
+let "tweet %= 12"
 fi
 
 case $tweet in
@@ -30,11 +30,12 @@ case $tweet in
 8)ttytter -status="$random_int: I am an open sourced build bot. Check my source out sometime! http://goo.gl/2IyQ2"; sleep 5400;;
 9)ttytter -status="$random_int: If you havent checked out http://www.t3hh4xx0r.com lately, go now!"; sleep 5400;;
 10)ttytter -status="$random_int: Have a buddy with an Eris, Hero, Evo, OG Droid, Incredible, or Thunderbolt? Tell him to check us out!"; sleep 5400;;
-11)ttytter -status="$random_int: #FF the T3hh4xx0r team. @r2DoesInc, @xoomdev, @linuxmotion, @omfbot"; sleep 5400;;
-12)ttytter -status="$random_int: #FF @sgarriques, @WilliSIVXX, @poitee, for their help behind the scenes."; sleep 5400;;
-13)ttytter -status="$random_int: #FF @khasmek, @poitee, @r2doesinc for their help in creating me!"; sleep 5400;;
-14)ttytter -status="$random_int: #FF these awesome devs, @r2doesinc, @kasmek, @peteralfonso, @linuxmotion, @xoomdev, @drod2169, @TeamAndIRC, @HCDRJacob, @imnuts07"; sleep 5400;;
-15)ttytter -status="$random_int: #FF @rootzwiki, @_mrbirdman_, @Captainkrtek, @b16a2smith for bringing us an amazing website."; sleep 5400;;
+11)ttytter -status="$random_int: For Sale: Swappa (Android) listing for Asus Eee Pad Transformer TF101 (Other): $400 http://t.co/NvlDGTd via @swappa"; sleep 5400;;
+12)ttytter -status="$random_int: #FF the T3hh4xx0r team. @r2DoesInc, @xoomdev, @linuxmotion, @omfbot"; sleep 5400;;
+13)ttytter -status="$random_int: #FF @sgarriques, @WilliSIVXX, @poitee, for their help behind the scenes."; sleep 5400;;
+14)ttytter -status="$random_int: #FF @khasmek, @poitee, @r2doesinc for their help in creating me!"; sleep 5400;;
+15)ttytter -status="$random_int: #FF these awesome devs, @r2doesinc, @kasmek, @peteralfonso, @linuxmotion, @xoomdev, @drod2169, @TeamAndIRC, @HCDRJacob, @imnuts07"; sleep 5400;;
+16)ttytter -status="$random_int: #FF @rootzwiki, @_mrbirdman_, @Captainkrtek, @b16a2smith for bringing us an amazing website."; sleep 5400;;
 esac
 
 done

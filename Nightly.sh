@@ -10,7 +10,7 @@ popd
 . OMFBOT/OMFBOT_config
 
 #Announce the beginning of nightlies.
-ttytter -status="Nightlies for $DATE have started, stay tuned. Please wipe when updateing tonights build."
+ttytter -status="Nightlies for $DATE have started, stay tuned."
 pushd ~/Nightly
 
 #Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
@@ -19,13 +19,6 @@ repo forall -c git reset HEAD --hard
 repo sync -j99
 
 #Setup mecha branches
-pushd bionic/
-git checkout -b mecha origin/mecha
-git pull origin mecha
-git checkout -b master origin/master
-git checkout master
-popd
-
 pushd frameworks/base/
 git checkout -b mecha origin/mecha
 git pull origin mecha
@@ -94,6 +87,10 @@ popd
 ./OMFBOT/desirec.sh
 
 ./OMFBOT/heroc.sh
+
+./OMFBOT/mesmerizemtd.sh
+
+./OMFBOT/showcasemtd.sh
 
 exit
 

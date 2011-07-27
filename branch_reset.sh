@@ -1,9 +1,5 @@
 #!/bin/bash
 
-pushd bionic/
-git checkout master
-popd
-
 pushd frameworks/base/
 git checkout master
 popd

@@ -2,9 +2,9 @@
 
 pushd ~/Nightly
 
-pushd bionic/
-git checkout mecha
-popd
+# pushd bionic/
+# git checkout mecha
+# popd
 
 pushd frameworks/base/
 git checkout mecha
