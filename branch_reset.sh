@@ -8,6 +8,10 @@ pushd system/core/
 git checkout master
 popd
 
+pushd packages/apps/God_Mode/
+git checkout master
+popd
+
 pushd system/netd/
 git checkout master
 popd
