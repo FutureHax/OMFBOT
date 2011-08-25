@@ -37,15 +37,6 @@ git push
 popd
 popd
 
-#Take a pause, @OMFBOT doesn't like to tweet in such rapid sucession.
-sleep 60
-
-#Announce new build avaialibility in God Mode.
-if [ ! -z $DEVICE ]
-then
-ttytter -status="Grab the new $DEVICE nightly from God Mode!"
-fi
-
 cd ~/
 
 pushd ~/Nightly

@@ -9,11 +9,8 @@ popd
 #Pull config from file.
 . OMFBOT/OMFBOT_config
 
-#Announce the beginning of nightlies.
-ttytter -autosplit={word,char,cut} -status="Nightly: $DATE. Changes: Updated -- $DESCRIPTION"
-pushd ~/Nightly
-
 #Pull in all new changes, and reset back to HEAD to be sure no testing commits are included.
+pushd ~/Nightly
 repo forall -c git branch -D  mecha
 repo forall -c git reset HEAD --hard
 repo sync -j9
@@ -100,6 +97,8 @@ popd
 ./OMFBOT/mesmerizemtd.sh
 
 ./OMFBOT/showcasemtd.sh
+
+./OMFBOT/vibrantmtd.sh
 
 exit
 
