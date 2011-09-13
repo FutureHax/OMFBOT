@@ -100,5 +100,7 @@ popd
 
 ./OMFBOT/vibrantmtd.sh
 
+./OMFBOT/p999.sh
+
 exit
 
