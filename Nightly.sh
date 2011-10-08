@@ -13,7 +13,8 @@ popd
 pushd ~/Nightly
 repo forall -c git branch -D  mecha
 repo forall -c git reset HEAD --hard
-repo sync -j9
+repo sync -f -j9
+repo sync -f -j9
 
 #Setup mecha branches
 pushd frameworks/base/
@@ -75,12 +76,17 @@ popd
 . vendor/omfgb/build/nightly.sh
 popd
 
+#Announce the beginning of nightlies.
+ttytter -status="Nightlies for $DATE have started, stay tuned"
+
 #Start builds. These can be reordered.
-./OMFBOT/fascinatemtd.sh
+ ./OMFBOT/fascinatemtd.sh
 
 ./OMFBOT/mecha.sh
 
 ./OMFBOT/shadow.sh
+
+./OMFBOT/ace.sh
 
 ./OMFBOT/inc.sh
 
@@ -90,9 +96,9 @@ popd
 
 ./OMFBOT/sholes.sh
 
-./OMFBOT/desirec.sh
+#./OMFBOT/desirec.sh
 
-./OMFBOT/heroc.sh
+#./OMFBOT/heroc.sh
 
 ./OMFBOT/mesmerizemtd.sh
 
