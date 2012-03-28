@@ -104,6 +104,8 @@ ttytter -status="Nightlies for $DATE have started, stay tuned"
 
 ./OMFBOT/showcasemtd.sh
 
+./OMFBOT/pecan.sh
+
 ./OMFBOT/vibrantmtd.sh
 
 ./OMFBOT/p999.sh
