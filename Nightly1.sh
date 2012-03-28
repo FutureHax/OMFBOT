@@ -90,6 +90,8 @@ ttytter -status="Nightlies for $DATE have started, stay tuned"
 
 ./OMFBOT/inc.sh
 
+./OMFBOT/pecan.sh
+
 ./OMFBOT/vivow.sh
 
 exit

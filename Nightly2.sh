@@ -33,6 +33,8 @@ popd
 
 ./OMFBOT/showcasemtd.sh
 
+./OMFBOT/pecan.sh
+
 ./OMFBOT/vibrantmtd.sh
 
 ./OMFBOT/p999.sh
